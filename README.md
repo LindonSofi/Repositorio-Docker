@@ -20,22 +20,18 @@ Para levantar la aplicación completa, solo se necesita tener **Docker Desktop**
 2. El proyecto utiliza archivos .env.example como plantillas. Es necesario crear los archivos .env correspondientes para que todo funcione. 
 
 En la carpeta backend/:
-  Crea un archivo llamado .env.
-  Copia el contenido de .env.example y pégalo en el nuevo .env.
-  Asegúrate de que tenga el puerto:
-  PORT=3001
+Crea un archivo llamado .env.
+Copia el contenido de .env.example y pégarlo en el nuevo .env.
+Asegúrate de que tenga el puerto: PORT=3001
 
 En la carpeta frontend/:
-  Crea un archivo llamado .env.
-  Copia el contenido de .env.example y pégalo en el nuevo .env.
-  Asegúrate de que tenga la URL de la API:
-  VITE_API_URL="http://localhost:3001/api"
+Crea un archivo llamado .env.
+Copia el contenido de .env.example y pégarlo en el nuevo .env.
+Asegúrate de que tenga la URL de la API:VITE_API_URL="http://localhost:3001/api"
 
-3. Levantar los contenedores
-   docker-compose up --build
+3. Levantar los contenedores: docker-compose up --build
 
-4.Acceder a la aplicación
-Una vez que los contenedores estén corriendo, la aplicación estará accesible en:
-Frontend (Aplicación Web): http://localhost:8080
-Backend (Endpoint de prueba): http://localhost:3001/api
+4.Una vez que los contenedores estén corriendo, la aplicación estará accesible en:
+*Frontend (Aplicación Web): http://localhost:8080
+*Backend (Endpoint de prueba): http://localhost:3001/api
 
