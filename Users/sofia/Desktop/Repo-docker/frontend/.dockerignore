@@ -1,0 +1,14 @@
+# /frontend/.dockerignore
+
+# Ignorar dependencias
+node_modules
+
+# Ignorar archivos de entorno
+.env
+
+# Logs de npm
+npm-debug.log
+
+# Ignorar la carpeta de build (esta se crea *dentro* del contenedor)
+dist
+build

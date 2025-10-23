@@ -1,0 +1,10 @@
+# /backend/.dockerignore
+
+# Ignorar dependencias (se instalan dentro del contenedor)
+node_modules
+
+# Ignorar archivos de entorno (se manejan diferente)
+.env
+
+# Logs de npm
+npm-debug.log

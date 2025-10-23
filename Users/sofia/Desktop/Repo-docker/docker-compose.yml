@@ -1,0 +1,33 @@
+# Versión de la sintaxis de Docker Compose
+version: '3.8'
+
+# Aquí definimos todos nuestros servicios (contenedores)
+services:
+
+  # --- Servicio del Backend ---
+  backend:
+    # Le dice que construya la imagen usando el Dockerfile
+    # que está en la carpeta ./backend
+    build: ./backend
+    container_name: libreria_backend
+    restart: always
+    # Carga las variables de entorno desde el archivo .env
+    env_file:
+      - ./backend/.env
+    # Mapea el puerto: 3001 de tu PC (host) al 3001 del contenedor
+    ports:
+      - "3001:3001"
+
+  # --- Servicio del Frontend ---
+  frontend:
+    # Construye la imagen usando el Dockerfile de la carpeta ./frontend
+    build: ./frontend
+    container_name: libreria_frontend
+    restart: always
+    # Mapea el puerto: 8080 de tu PC (host) al 80 del contenedor (nginx)
+    ports:
+      - "8080:80"
+    # Le dice a Docker que este servicio solo debe iniciar
+    # DESPUÉS de que el servicio 'backend' se haya iniciado.
+    depends_on:
+      - backend
