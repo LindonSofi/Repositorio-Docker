@@ -1,4 +1,4 @@
-// Este es tu archivo /backend/index.js
+ //backend/index.js
 
 const express = require('express');
 const app = express();
